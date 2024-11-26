@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Calculator</title>
+</head>
+<body>
+    <div id="result"></div>
+
+    <script>
+        // Function to calculate and display the sum
+        function displaySum(a, b) {
+            const sum = a + b; // Calculate the sum
+            const resultDiv = document.getElementById('result'); // Get the result container
+            
+            // Create an h1 element and set its text
+            const h1 = document.createElement('h1');
+            h1.textContent = `The answer for adding ${a} and ${b} is ${sum}`;
+            
+            // Append the h1 element to the result div
+            resultDiv.innerHTML = ''; // Clear previous content
+            resultDiv.appendChild(h1);
+        }
+
+        // Example usage:
+        displaySum(4, 6); // Output: The answer for adding 4 and 6 is 10
+    </script>
+</body>
+</html>
